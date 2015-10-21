@@ -83,4 +83,4 @@ tidy_data <- data[,lapply(.SD,mean),by="activity,subject",.SDcols=col_names]
 setnames(tidy_data,old=col_names,new=new_col_names)
 
 #write the tidy Data
-write.table(tidy_data,'tidy_avg_data')
+write.table(tidy_data,'tidy_avg_data.txt',row.names = FALSE)
